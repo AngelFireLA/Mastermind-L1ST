@@ -139,9 +139,9 @@ def main():
         dessiner_cases(fenetre, grille_couleurs, grille_progrès, ligne_actuelle, case_selectionnee)
 
         if est_victoire:
-            afficher_texte(fenetre, largeur_fenetre // 2, hauteur_fenetre - 70, "Bravo! Vous avez trouvé le combo!", 43, dict_couleurs["vert"])
+            afficher_texte(fenetre, largeur_fenetre // 2, hauteur_fenetre - 70, "Bravo! Vous avez trouvé le combo!", 36, dict_couleurs["vert"])
         elif est_perdu:
-            afficher_texte(fenetre, largeur_fenetre // 2, hauteur_fenetre - 70, f"Dommage! Le combo était: {partie.combinaison}", 43, dict_couleurs["rouge"])
+            afficher_texte(fenetre, largeur_fenetre // 2, hauteur_fenetre - 70, f"Dommage! Le combo était: {partie.combinaison}", 36, dict_couleurs["rouge"])
         else:
             afficher_texte(fenetre, largeur_fenetre // 2, hauteur_fenetre - 80, "1: rouge | 2: vert | 3: bleu", 36, dict_couleurs["bleu marin"])
         afficher_texte(fenetre, largeur_fenetre // 2, hauteur_fenetre - 30,"4: jaune | 5: orange | 6: rose", 36, dict_couleurs["bleu marin"])
