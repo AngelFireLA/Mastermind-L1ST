@@ -2,11 +2,12 @@ import pygame
 pygame.init()
 
 from moteur.partie import Partie
-from utils import largeur_fenetre, hauteur_fenetre, afficher_texte, dict_couleurs, souris_est_dans_zone
+from utils import largeur_fenetre, hauteur_fenetre, afficher_texte, dict_couleurs, souris_est_dans_zone, \
+    chemin_absolu_dossier
 from interface import menu_pause, boutton
 
 decalage = 50
-arriere_plan = pygame.image.load("assets/images/menu_arrière_plan.jpg")
+arriere_plan = pygame.image.load(chemin_absolu_dossier+"assets/images/menu_arrière_plan.jpg")
 arriere_plan = pygame.transform.scale(arriere_plan, (largeur_fenetre, hauteur_fenetre))
 
 
