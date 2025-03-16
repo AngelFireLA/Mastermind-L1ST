@@ -39,4 +39,4 @@ dict_couleurs = {
     "bleu marin": (20, 40, 70),
     "bleu boutton": (100, 150, 255)
 }
-chemin_absolu_dossier = os.path.dirname(os.path.abspath(__file__))
+chemin_absolu_dossier = os.path.dirname(os.path.abspath(__file__)) + "/"
