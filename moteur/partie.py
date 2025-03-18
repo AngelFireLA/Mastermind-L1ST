@@ -1,4 +1,4 @@
-from utils import récupérer_combinaison_aléatoire
+from ..utils import récupérer_combinaison_aléatoire
 
 class Partie:
     def __init__(self):

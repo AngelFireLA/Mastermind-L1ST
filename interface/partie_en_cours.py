@@ -1,10 +1,10 @@
 import pygame
 pygame.init()
 
-from moteur.partie import Partie
-from utils import largeur_fenetre, hauteur_fenetre, afficher_texte, dict_couleurs, souris_est_dans_zone, \
+from ..moteur.partie import Partie
+from ..utils import largeur_fenetre, hauteur_fenetre, afficher_texte, dict_couleurs, souris_est_dans_zone, \
     chemin_absolu_dossier
-from interface import menu_pause, boutton
+from . import menu_pause, boutton
 
 decalage = 50
 arriere_plan = pygame.image.load(chemin_absolu_dossier+"assets/images/menu_arrière_plan.jpg")
@@ -142,10 +142,11 @@ def main():
         if est_victoire:
             afficher_texte(fenetre, largeur_fenetre // 2, hauteur_fenetre - 70, "Bravo! Vous avez trouvé le combo!", 36, dict_couleurs["vert"])
         elif est_perdu:
-            afficher_texte(fenetre, largeur_fenetre // 2, hauteur_fenetre - 70, f"Dommage! Le combo était: {partie.combinaison}", 36, dict_couleurs["rouge"])
+            afficher_texte(fenetre, largeur_fenetre // 2, hauteur_fenetre - 80, f"Dommage! Le combo était:", 36, dict_couleurs["rouge"])
+            afficher_texte(fenetre, largeur_fenetre // 2, hauteur_fenetre - 30, " ".join(partie.combinaison), 36, dict_couleurs["rouge"])
         else:
             afficher_texte(fenetre, largeur_fenetre // 2, hauteur_fenetre - 80, "1: rouge | 2: vert | 3: bleu", 36, dict_couleurs["bleu marin"])
-        afficher_texte(fenetre, largeur_fenetre // 2, hauteur_fenetre - 30,"4: jaune | 5: orange | 6: rose", 36, dict_couleurs["bleu marin"])
+            afficher_texte(fenetre, largeur_fenetre // 2, hauteur_fenetre - 30,"4: jaune | 5: orange | 6: rose", 36, dict_couleurs["bleu marin"])
 
         pygame.display.flip()
         horloge.tick(60)
